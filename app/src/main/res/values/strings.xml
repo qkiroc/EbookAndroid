@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">书友</string>
+    <string name="home">书城</string>
+    <string name="bookrack">书架</string>
+    <string name="zone">书圈</string>
+    <string name="mine">我的</string>
+    <string name="bottom">-160dp</string>
+    <string name="url">http://192.168.0.106:8080</string>
+</resources>

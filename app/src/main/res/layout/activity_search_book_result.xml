@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SearchBookResultActivity"
+    android:background="#F8F8F8">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#fff">
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@mipmap/goback"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:id="@+id/img_seacrhbookresultactive_goback"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="导入本地书籍"
+            android:textColor="#000"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="40dp"
+            android:textSize="16sp"/>
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#EEEEEE"
+        android:layout_marginTop="50dp"/>
+
+    <ListView
+        android:id="@+id/lv_searchbookresult"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        android:paddingTop="10dp"
+        android:layout_above="@id/tv_addtobookrack"
+        >
+
+    </ListView>
+    <TextView
+        android:id="@+id/tv_addtobookrack"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#2890A8"
+        android:layout_alignParentBottom="true"
+        android:text="导入书架"
+        android:textColor="#fff"
+        android:textSize="14sp"
+        android:gravity="center"/>
+</RelativeLayout>

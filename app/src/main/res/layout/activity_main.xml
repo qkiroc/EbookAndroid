@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+   <RelativeLayout
+       android:id="@+id/ly_top_bar"
+       android:layout_width="match_parent"
+       android:layout_height="0dp"
+       android:background="#fff"
+       >
+   </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ly_tab_bar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:paddingTop="7dp"
+        android:orientation="horizontal"
+        android:background="#fff">
+
+        <TextView
+            android:id="@+id/txt_home"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#fff"
+            android:drawableTop="@drawable/tab_menu_home"
+            android:drawablePadding="3dp"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/home"
+            android:textColor="@color/tab_menu_text"
+            android:textSize="10sp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/txt_bookrack"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#fff"
+            android:drawableTop="@drawable/tab_menu_bookrack"
+            android:drawablePadding="3dp"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/bookrack"
+            android:textColor="@color/tab_menu_text"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/txt_zone"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#fff"
+            android:drawableTop="@drawable/tab_menu_zone"
+            android:drawablePadding="3dp"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/zone"
+            android:textColor="@color/tab_menu_text"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/txt_mine"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#fff"
+            android:drawableTop="@drawable/tab_menu_mine"
+            android:drawablePadding="3dp"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/mine"
+            android:textColor="@color/tab_menu_text"
+            android:textSize="10sp" />
+    </LinearLayout>
+    <View
+        android:id="@+id/div_tab_bar"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="#BBBBBB"
+        android:layout_above="@id/ly_tab_bar"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ly_top_bar"
+        android:layout_above="@id/div_tab_bar"
+        android:background="#fff"
+        android:id="@+id/ly_content">
+
+    </FrameLayout>
+
+</RelativeLayout>

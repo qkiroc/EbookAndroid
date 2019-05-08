@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:id="@+id/listitem_catalog">
+    <TextView
+        android:id="@+id/listitem_catalogtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:textSize="14sp"
+        android:textColor="#444635"
+        android:text="第一章 科学边界"
+        android:gravity="center"
+        android:layout_centerVertical="true" />
+    <TextView
+        android:id="@+id/listitem_catalogpagenumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="#444635"
+        android:text="11"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="#CDD3AE"/>
+</RelativeLayout>

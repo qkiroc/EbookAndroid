@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:id="@+id/listitem_searchbookresultbg"
+    >
+    <TextView
+        android:id="@+id/listitem_searchbookresulttext"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_centerVertical="true"
+        android:textColor="#000"
+        android:text="123"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_toLeftOf="@id/listitem_searchbookresultchoose"
+        />
+    <ImageView
+        android:id="@+id/listitem_searchbookresultchoose"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/choose"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="20dp" />
+    <TextView
+        android:id="@+id/listitem_searchbookresulthasadd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="已导入"
+        android:textColor="#ACACAC"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:paddingRight="10dp"/>
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/listitem_searchbookresultpath"
+        android:visibility="gone"/>
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/listitem_searchbookresultischeck"
+        android:visibility="gone"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#EEEEEE"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"/>
+
+</RelativeLayout>
