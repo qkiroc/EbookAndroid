@@ -302,7 +302,6 @@ public class ReadingPageActivity extends AppCompatActivity implements View.OnTou
                         i++;
                     }
                     Long timestamp = System.currentTimeMillis();
-                    Log.d("内容", String.valueOf(textcontent.getText()));
                     String text = String.valueOf(textcontent.getText());
                     ContentValues cValuemark= new ContentValues();
                     cValuemark.put("path", path);
@@ -310,6 +309,7 @@ public class ReadingPageActivity extends AppCompatActivity implements View.OnTou
                     cValuemark.put("page",curentpage);
                     cValuemark.put("section", sectiontitle);
                     cValuemark.put("words", text);
+                    cValuemark.put("title",booktitle.substring(0,booktitle.length()-4));
                     db.insert("bookmarktable",null, cValuemark);
                 }
                 else {

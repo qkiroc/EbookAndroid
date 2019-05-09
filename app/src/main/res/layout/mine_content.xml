@@ -181,7 +181,39 @@
         android:orientation="vertical">
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp">
+            android:layout_height="50dp"
+            android:id="@+id/rl_minemyideal">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/tab_zone_normal"
+                android:layout_marginTop="15dp"
+                android:tint="#BDC1DB"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="8dp"/>
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="我的有想"
+                android:layout_marginLeft="50dp"
+                android:textColor="#000"
+                android:layout_marginTop="15dp"/>
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="15dp"
+                android:src="@mipmap/torightarrow"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"/>
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#F8F8F8"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/rl_minelikeclassify">
             <ImageView
                 android:layout_width="20dp"
                 android:layout_height="20dp"
@@ -208,9 +240,10 @@
             android:layout_width="match_parent"
             android:layout_height="2dp"
             android:background="#F8F8F8"/>
-        <RelativeLayout
+     <!--   <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp">
+            android:layout_height="50dp"
+            android:id="@+id/rl_minebookmark">
             <ImageView
                 android:layout_width="20dp"
                 android:layout_height="20dp"
@@ -236,10 +269,11 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="2dp"
-            android:background="#F8F8F8"/>
+            android:background="#F8F8F8"/>-->
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp">
+            android:layout_height="50dp"
+            android:id="@+id/rl_minewant">
             <ImageView
                 android:layout_width="20dp"
                 android:layout_height="20dp"

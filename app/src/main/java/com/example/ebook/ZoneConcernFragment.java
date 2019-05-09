@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.JavascriptInterface;
+import android.webkit.ValueCallback;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Toast;
@@ -31,7 +32,10 @@ public class ZoneConcernFragment extends Fragment {
         web_view.setOnScrollChangeListener(new MyWebView.OnScrollChangeListener() {
             @Override
             public void onPageEnd(int l, int t, int oldl, int oldt) {
-
+                web_view.evaluateJavascript("javascript:loadcontent()", new ValueCallback<String>() {
+                    @Override
+                    public void onReceiveValue(String value) {}
+                });
             }
 
             @Override

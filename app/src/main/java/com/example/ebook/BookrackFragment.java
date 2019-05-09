@@ -12,6 +12,8 @@ import android.view.ViewGroup;
 import android.view.animation.TranslateAnimation;
 import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -112,6 +114,22 @@ public class BookrackFragment extends Fragment {
                 isDeletelan();
             }
         });
+        ImageView button = contentView.findViewById(R.id.img_bookrackbutton);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), SearchBookResultActivity.class);
+                startActivity(intent);
+            }
+        });
+        RelativeLayout search = contentView.findViewById(R.id.r_bookracksearch);
+        search.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), SearchActivity.class);
+                startActivity(intent);
+            }
+        });
 
         return contentView;
     }
@@ -132,7 +150,6 @@ public class BookrackFragment extends Fragment {
 
         mData = new LinkedList<BookrackList>();
         for (int i = 0; i < path.size(); i++){
-            Log.d("HEHE", covers.get(i));
             mData.add(new BookrackList(titles.get(i), path.get(i), covers.get(i), false));
         }
         adapter = new BookrackAdapter(mData, getActivity());

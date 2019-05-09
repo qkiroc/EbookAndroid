@@ -16,6 +16,7 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.ebook.Util.Picture;
@@ -45,6 +46,10 @@ public class MineFragment extends Fragment {
     private TextView fanscount;
     private LinearLayout concern;
     private LinearLayout fans;
+    private RelativeLayout myideal;
+    private RelativeLayout likeclassify;
+   // private RelativeLayout bookmark;
+    private RelativeLayout want;
     private Handler handle;
     private String strusername;
     private String strusersignature;
@@ -64,6 +69,10 @@ public class MineFragment extends Fragment {
         fanscount = contentView.findViewById(R.id.tv_fanscount);
         concern = contentView.findViewById(R.id.ly_concern);
         fans = contentView.findViewById(R.id.ly_fans);
+        myideal = contentView.findViewById(R.id.rl_minemyideal);
+        likeclassify = contentView.findViewById(R.id.rl_minelikeclassify);
+        //bookmark = contentView.findViewById(R.id.rl_minebookmark);
+        want = contentView.findViewById(R.id.rl_minewant);
         return contentView;
     }
 
@@ -239,6 +248,57 @@ public class MineFragment extends Fragment {
                     Intent intent = new Intent(getActivity(), ConcernActivity.class);
                     Bundle bundle = new Bundle();
                     bundle.putString("type", "fans");
+                    bundle.putString("userid", userid);
+                    intent.putExtras(bundle);
+                    startActivity(intent);
+                }
+                else {
+                    Intent intent = new Intent(getActivity(), LoginActivity.class);
+                    startActivity(intent);
+                }
+            }
+        });
+        //跳转到我的有想
+        myideal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(cursor.getCount() == 1){
+                    Intent intent = new Intent(getActivity(), MyIdealActivity.class);
+                    Bundle bundle = new Bundle();
+                    bundle.putString("userid", userid);
+                    intent.putExtras(bundle);
+                    startActivity(intent);
+                }
+                else {
+                    Intent intent = new Intent(getActivity(), LoginActivity.class);
+                    startActivity(intent);
+                }
+            }
+        });
+        //跳转到想读
+        want.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(cursor.getCount() == 1){
+                    Intent intent = new Intent(getActivity(), WantReadActivity.class);
+                    Bundle bundle = new Bundle();
+                    bundle.putString("userid", userid);
+                    intent.putExtras(bundle);
+                    startActivity(intent);
+                }
+                else {
+                    Intent intent = new Intent(getActivity(), LoginActivity.class);
+                    startActivity(intent);
+                }
+            }
+        });
+        //跳转到兴趣标签
+        likeclassify.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(cursor.getCount() == 1){
+                    Intent intent = new Intent(getActivity(), LikeClassifyActivity.class);
+                    Bundle bundle = new Bundle();
                     bundle.putString("userid", userid);
                     intent.putExtras(bundle);
                     startActivity(intent);

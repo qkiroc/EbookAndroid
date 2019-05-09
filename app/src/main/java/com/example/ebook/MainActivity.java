@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         String book_table = "create table if not exists booktable(_id integer primary key autoincrement, path text, title text, cover text)";
         String page_table = "create table if not exists pagetable(_id integer primary key autoincrement, path text, pageseek text)";
         String section_table = "create table if not exists sectiontable(_id integer primary key autoincrement, path text, section text, page integer)";
-        String bookmark_table = "create table if not exists bookmarktable(_id integer primary key autoincrement, path text, time text, page integer, section text, words text)";
+        String bookmark_table = "create table if not exists bookmarktable(_id integer primary key autoincrement, path text, time text, page integer, section text, words text, title text)";
         String curentpage_table = "create table if not exists curentpagetable(_id integer primary key autoincrement, path text, curentpage integer)";
         db.execSQL(user_table);
         db.execSQL(book_table);
@@ -204,7 +204,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     //跳转到扫描书籍active
     public void toSearchBookResult(View source){
-        Intent intent = new Intent(MainActivity.this, SearchBookResultActivity.class);
-        startActivity(intent);
+
     }
 }

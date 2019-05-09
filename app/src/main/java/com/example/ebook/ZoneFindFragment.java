@@ -4,10 +4,12 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.JavascriptInterface;
+import android.webkit.ValueCallback;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -32,7 +34,10 @@ public class ZoneFindFragment extends Fragment {
         web_view.setOnScrollChangeListener(new MyWebView.OnScrollChangeListener() {
             @Override
             public void onPageEnd(int l, int t, int oldl, int oldt) {
-
+                web_view.evaluateJavascript("javascript:loadcontent()", new ValueCallback<String>() {
+                    @Override
+                    public void onReceiveValue(String value) {}
+                });
             }
 
             @Override

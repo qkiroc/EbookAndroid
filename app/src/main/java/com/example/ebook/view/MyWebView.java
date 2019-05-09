@@ -16,7 +16,7 @@ public class MyWebView extends WebView {
         float webcontent = getContentHeight() * getScale();
         // 当前webview的高度
         float webnow = getHeight() + getScrollY();
-        if (Math.abs(webcontent - webnow) < 1) {
+        if (Math.abs(webcontent - webnow) < 10) {
             //处于底端
             mOnScrollChangeListener.onPageEnd(l, t, oldl, oldt);
         } else if (getScrollY() == 0) {
